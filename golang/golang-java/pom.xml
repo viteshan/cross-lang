@@ -26,7 +26,7 @@
                     </descriptorRefs>
                     <archive>
                         <manifest>
-                            <mainClass>JnrMath</mainClass>
+                            <mainClass>JnaMath</mainClass>
                         </manifest>
                     </archive>
                 </configuration>
@@ -44,11 +44,11 @@
     </build>
 
     <dependencies>
-        <!-- https://mvnrepository.com/artifact/com.github.jnr/jnr-ffi -->
+        <!-- https://mvnrepository.com/artifact/net.java.dev.jna/jna -->
         <dependency>
-            <groupId>com.github.jnr</groupId>
-            <artifactId>jnr-ffi</artifactId>
-            <version>2.1.9</version>
+            <groupId>net.java.dev.jna</groupId>
+            <artifactId>jna</artifactId>
+            <version>5.2.0</version>
         </dependency>
     </dependencies>
 

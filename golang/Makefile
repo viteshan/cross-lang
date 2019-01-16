@@ -3,7 +3,7 @@
 
 GO ?= latest
 
-SERVERMAIN = $(shell pwd)/math.go
+SERVERMAIN = $(shell pwd)/src/math.go
 BUILDDIR = $(shell pwd)/build
 LIB_LINUX = $(BUILDDIR)/linux/libmath.so
 LIB_WINDOWS = $(BUILDDIR)/windows/libmath.dll

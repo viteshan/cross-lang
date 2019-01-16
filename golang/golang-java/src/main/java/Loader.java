@@ -1,5 +1,3 @@
-import jnr.ffi.LibraryLoader;
-
 import java.io.File;
 import java.io.FileOutputStream;
 import java.io.IOException;
@@ -7,12 +5,8 @@ import java.io.InputStream;
 import java.nio.channels.Channels;
 import java.nio.channels.ReadableByteChannel;
 
-public class JnrMath {
-
-    private static final MathLib MATH_LIB;
-
-
-    private final static void  loadFromStream( InputStream is) throws IOException {
+public class Loader {
+    public final static void loadFromStream(InputStream is) throws IOException {
         FileOutputStream os = null;
         File dstFile;
         try {
@@ -42,19 +36,5 @@ public class JnrMath {
             }
             is.close();
         }
-    }
-
-    static {
-        String mathLib = "math";
-        InputStream is = MathLib.class.getClassLoader().getResourceAsStream(System.mapLibraryName(mathLib));
-        try {
-            loadFromStream(is);
-        } catch (IOException e) {
-            e.printStackTrace();
-        }
-        MATH_LIB = LibraryLoader.create(MathLib.class).library(mathLib).load();
-    }
-    public static void main(String[] args) {
-        System.out.println(MATH_LIB.Multiply(2, 4));
     }
 }
