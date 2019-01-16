@@ -6,7 +6,7 @@
 ## golang-java
 
 ```
-make all
+make (darwin/windows/linux)
 
 ls  build/*/* | grep -v "\.h" | xargs -i cp {} golang-java/src/main/resources/
 
@@ -18,7 +18,23 @@ java -jar target/golang-java-1.0-SNAPSHOT.jar
 
 ```
 
+## golang-python
+
+```
+make (darwin/windows/linux)
+
+ls  build/*/* | grep -v "\.h" | xargs -i cp {} golang-python/lib/
+
+cd golang-python
+
+python hello.py
+
+```
+
+## golang-php
+
+Todo
 
 ### Reference:
 
-1. https://blog.dogan.io/2015/08/15/java-jni-jnr-go/
+1. https://github.com/vladimirvivien/go-cshared-examples
