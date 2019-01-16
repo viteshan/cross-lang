@@ -6,7 +6,8 @@
 ## golang-java
 
 ```
-make (darwin/windows/linux)
+# choose your os, for example MacOS: make darwin
+make (darwin|windows|linux)
 
 ls  build/*/* | grep -v "\.h" | xargs -i cp {} golang-java/src/main/resources/
 
@@ -21,7 +22,8 @@ java -jar target/golang-java-1.0-SNAPSHOT.jar
 ## golang-python
 
 ```
-make (darwin/windows/linux)
+# choose your os, for example MacOS: make darwin
+make (darwin|windows|linux)
 
 ls  build/*/* | grep -v "\.h" | xargs -i cp {} golang-python/lib/
 
